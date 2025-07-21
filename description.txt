@@ -1,0 +1,2 @@
+VideoCrafter-Pinokio is a local text-to-video AI tool adapted for easy use inside Pinokio.
+Launch app.py to generate video clips from text prompts.

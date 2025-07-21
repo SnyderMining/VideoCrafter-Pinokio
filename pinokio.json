@@ -1,0 +1,13 @@
+{
+  "id": "videocrafter-pinokio",
+  "name": "VideoCrafter-Pinokio",
+  "type": "app",
+  "entry": "gradio_app.py",
+  "env": {
+    "type": "python",
+    "version": "3.8.5",
+    "dependencies_file": "requirements.txt"
+  },
+  "description": "VideoCrafter2 local Gradio text-to-video demo adapted for Pinokio.",
+  "icon": "icon.png"
+}
