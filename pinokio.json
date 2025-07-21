@@ -2,12 +2,28 @@
   "id": "videocrafter-pinokio",
   "name": "VideoCrafter-Pinokio",
   "type": "app",
-  "entry": "gradio_app.py",
+  "description": "VideoCrafter2 local Gradio text-to-video demo adapted for Pinokio.",
+  "icon": "icon.png",
   "env": {
     "type": "python",
-    "version": "3.8.5",
-    "dependencies_file": "requirements.txt"
+    "version": ">=3.8,<3.11" // Recommend a range, or be specific if VideoCrafter requires it
   },
-  "description": "VideoCrafter2 local Gradio text-to-video demo adapted for Pinokio.",
-  "icon": "icon.png"
+  "menu": [
+    {
+      "name": "Install",
+      "icon": "fa-solid fa-download",
+      "target": "install.py", // Pinokio will run your install.py script
+      "params": {},
+      "daemon": false // This task runs once and exits
+    },
+    {
+      "name": "Run VideoCrafter",
+      "icon": "fa-solid fa-play",
+      "target": "run.py", // Pinokio will run your run.py script
+      "params": {},
+      "daemon": true, // This task (the Gradio app) stays running in the background
+      "port": 7860, // Default Gradio port, ensure this matches if different
+      "ui": true // Tells Pinokio to open this port in a browser tab
+    }
+  ]
 }
