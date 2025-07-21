@@ -129,6 +129,10 @@ def install_videocrafter():
     print("\n--- Model Downloads COMPLETED (or skipped) ---")
     print("\nVideoCrafter installation process finished.")
     print("You can now run the 'Run VideoCrafter' command from Pinokio.")
+    input("\nPress Enter to close this window...") # This will pause the window
+
+
+
 
 if __name__ == "__main__":
     install_videocrafter()
